@@ -101,4 +101,9 @@ public class Restaurant {
     public int hashCode() {
         return Objects.hash(name, address, zipcode, phone, website, email, id);
     }
+
+    public String getName() {
+        return name;
+    }
+
 }
