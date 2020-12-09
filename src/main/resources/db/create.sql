@@ -1,6 +1,7 @@
 SET MODE PostgreSQL;
-
-CREATETABLE IF NOT EXISTS restaurants (
+CREATE DATABASE IF NOT EXISTS restaraunt;
+c\restaraunt;
+CREATE TABLE IF NOT EXISTS restaurants(
  id int PRIMARY KEY auto_increment,
  name VARCHAR,
  address VARCHAR,
@@ -10,15 +11,21 @@ CREATETABLE IF NOT EXISTS restaurants (
  email VARCHAR
 );
 
-CREATETABLE IF NOT EXISTS foodtypes (
+CREATE TABLE IF NOT EXISTS foodtypes (
  id int PRIMARY KEY auto_increment,
  name VARCHAR
 );
 
-CREATETABLE IF NOT EXISTS reviews (
+CREATE TABLE IF NOT EXISTS reviews (
  id int PRIMARY KEY auto_increment,
  writtenby VARCHAR,
  content VARCHAR,
  rating VARCHAR,
  restaurantid INTEGER
+);
+
+CREATE TABLE IF NOT EXISTS restaurants_foodtypes (
+id int PRIMARY KEY auto_increment,
+foodtypeid INTEGER,
+restaurantid INTEGER
 );
